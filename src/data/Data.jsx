@@ -12,6 +12,14 @@ import product7 from "../assets/product7.png";
 import product8 from "../assets/product8.png";
 
 
+export const TRENDS = [
+  {image:product1,item:"Chain bucket bag",price:"59.0",key:1},
+  {image:product1,item:"Pendant earrings",price:"59.0",key:2},
+  {image:product1,item:"Pendant earrings",price:"59.0",key:3},
+]
+export const SELLERS = []
+export const FEATURES = []
+
 export const PRODUCTS = [
   {
     name: "3 Piece Khaddar Suit-Embroidered",

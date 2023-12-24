@@ -5,7 +5,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import "../App.css";
-import {PRODUCT_BACKGROUND_COLOR} from "./SingleProduct";
 import product8 from "../assets/backgroundBaner.webp";
 
 const SingleSlide = () => {

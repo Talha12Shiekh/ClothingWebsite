@@ -14,6 +14,23 @@ font-family: 'Poppins', sans-serif; */
     font-family: 'Cookie', cursive;  
 }
 
+.trends_heading::after{
+    position: absolute;
+    content: "";
+    bottom: -8px;
+    height: 2px;
+    width: 20%;
+    background-color: brown;
+    left: 0;
+}
+
+.trend_image{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+
+}
+
 .products_heading::after{
     position:absolute;
     content:"";
@@ -137,9 +154,10 @@ font-family: 'Poppins', sans-serif; */
     height: 100%;
   }
 
-.product_item{
-    background:red;
-}
+  .slider_image{
+    height: 550px;
+    object-fit: cover;
+  }
 
 .product_item.active::after{
     position:absolute;

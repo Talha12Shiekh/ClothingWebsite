@@ -3,6 +3,8 @@ import Navbar from "./Components/BootNavbar";
 import MainContent from "./Components/MainContent";
 import Products from "./Components/Products";
 import Courasel from "./Components/Courasel";
+import MainSlider from './Components/MainSlider';
+import Trends from './Components/Trends';
 
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
       <MainContent/>
       <Products/>
       <Courasel/>
+      <Trends/>
+      <MainSlider/>
     </>
   )
 }
