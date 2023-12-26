@@ -5,6 +5,7 @@ import Products from "./Components/Products";
 import Courasel from "./Components/Courasel";
 import MainSlider from './Components/MainSlider';
 import Trends from './Components/Trends';
+import Discount from './Components/Discount';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Courasel/>
       <Trends/>
       <MainSlider/>
+      <Discount/>
     </>
   )
 }

@@ -20,9 +20,6 @@ import trend7 from "../assets/trend7.webp";
 import trend8 from "../assets/trend8.webp";
 import trend9 from "../assets/trend9.webp";
 
-
-
-
 export const TRENDS = [
   {image:trend1,item:"DES-04 KARANDI EMBROIDERED SHAWL",price:"8,050",key:1},
   {image:trend2,item:"MWS-04 WINTER EMBROIDERED 3PC",price:"8,050",key:2},

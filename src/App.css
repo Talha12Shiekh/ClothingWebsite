@@ -14,6 +14,22 @@ font-family: 'Poppins', sans-serif; */
     font-family: 'Cookie', cursive;  
 }
 
+.count_numbers{
+    font-size: 2rem;
+}
+
+.margin_left{
+    margin-left: .5rem;
+}
+
+.countdown{
+    display: flex;
+    gap:2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
 .trends_heading::after{
     position: absolute;
     content: "";
