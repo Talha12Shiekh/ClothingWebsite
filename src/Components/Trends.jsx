@@ -1,7 +1,7 @@
 import React from 'react'
 import "../App.css";
 import "bootstrap";
-import { TRENDS } from '../data/Data';
+import { TRENDS,SELLERS,FEATURES } from '../data/Data';
 import { PRODUCT_BACKGROUND_COLOR } from './SingleProduct';
 
 const Heading = ({heading}) => {
@@ -59,7 +59,7 @@ const Trends = () => {
             </div>
             <div>
                 <Heading heading={"best seller"}/>
-                {TRENDS.map(trend => {
+                {SELLERS.map(trend => {
                     return <SingleTrendCard key={trend.key}
                     {...trend}
                     />
@@ -67,7 +67,7 @@ const Trends = () => {
             </div>
             <div>
                 <Heading heading={"feature"}/>
-                {TRENDS.map(trend => {
+                {FEATURES.map(trend => {
                     return <SingleTrendCard key={trend.key}
                     {...trend}
                     />

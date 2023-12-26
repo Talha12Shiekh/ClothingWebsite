@@ -10,15 +10,37 @@ import product5 from "../assets/product5.png";
 import product6 from "../assets/product6.png";
 import product7 from "../assets/product7.png";
 import product8 from "../assets/product8.png";
+import trend1 from "../assets/trend1.webp";
+import trend2 from "../assets/trend2.webp";
+import trend3 from "../assets/trend3.webp";
+import trend4 from "../assets/trend4.webp";
+import trend5 from "../assets/trend5.webp";
+import trend6 from "../assets/trend6.webp";
+import trend7 from "../assets/trend7.webp";
+import trend8 from "../assets/trend8.webp";
+import trend9 from "../assets/trend9.webp";
+
+
 
 
 export const TRENDS = [
-  {image:product1,item:"Chain bucket bag",price:"59.0",key:1},
-  {image:product1,item:"Pendant earrings",price:"59.0",key:2},
-  {image:product1,item:"Pendant earrings",price:"59.0",key:3},
+  {image:trend1,item:"DES-04 KARANDI EMBROIDERED SHAWL",price:"8,050",key:1},
+  {image:trend2,item:"MWS-04 WINTER EMBROIDERED 3PC",price:"8,050",key:2},
+  {image:trend3,item:"DES-03 KARANDI EMBROIDERED SHAWL",price:"7,350",key:3},
 ]
-export const SELLERS = []
-export const FEATURES = []
+
+export const SELLERS = [
+  {image:trend4,item:"MWS-03 WINTER EMBROIDERED 3PC",price:"7,110",key:1},
+  {image:trend5,item:"MWS-01 WINTER EMBROIDERED 3PC",price:"6,300",key:2},
+  {image:trend6,item:"MWS-09 WINTER EMBROIDERED 3PC",price:"6,250",key:3},
+]
+
+export const FEATURES = [
+  {image:trend7,item:"MGW-10 COTTON SILK EMBROIDERED 3PCS UNSTICHED",price:"5,750",key:1},
+  {image:trend8,item:"MWS-07 PEACH WOOL EMBROIDERED 3PC",price:"6,250",key:2},
+  {image:trend9,item:"MWS-10 PECH WOOL EMBROIDERED 3PC",price:"6,250",key:3},
+]
+
 
 export const PRODUCTS = [
   {
