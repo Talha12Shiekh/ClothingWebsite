@@ -40,29 +40,20 @@ const Discount = () => {
 
   const {days,minutes,hours,seconds} = countdown;
 
-  function getHours(){
-    if(hours < 10){
-        return "0" + hours;
-    }
-
-    if(hours > 12){
-        return hours - 12;
-    }
-  }
-
   return (
     <div className="container my-5">
-      <div className="row row-cols-md-1 row-cols-lg-2 row-cols-sm-1" style={{ height: 350 }}>
-        <div>
-          <img
-            style={{ width: "100%", height: "100%" }}
-            loading="lazy"
-            alt="Loading..."
-            src={discountImage}
-          />
-        </div>
+      <div className="row gx-5" style={{ height: 350 }}>
         <div
-          className="d-flex justify-content-center align-items-center flex-column"
+        className="col-lg-6 col-md-12"
+        style={{
+          backgroundImage: `url(${discountImage})`,
+          backgroundRepeat:"no-repeat",
+          backgroundSize:"cover",
+          height:380
+        }}
+        ></div>
+        <div
+          className="d-flex justify-content-center align-items-center flex-column col-lg-6"
           style={{
             backgroundColor: PRODUCT_BACKGROUND_COLOR,
             backgroundImage: `url(${canvas.toDataURL()})`,
@@ -84,27 +75,27 @@ const Discount = () => {
           <p className="fs-5 monteserrat fw-bold">
             SALE <b style={{ color: "red" }}>50%</b>
           </p>
-          <div className="countdown">
+          <div className="countdown row row-cols-lg-5">
             <div>
-              <span className="count_numbers">
+              <span className="fs-2">
                 <b>{days < 10 ? "0" + days : days}</b>
               </span>
               <span className="margin_left">Day</span>
             </div>
             <div>
-              <span className="count_numbers">
-                <b>{getHours()}</b>
+              <span className="fs-2">
+                <b>{hours > 12 ? hours - 12 : hours}</b>
               </span>
               <span className="margin_left">Hour</span>
             </div>
             <div>
-              <span className="count_numbers">
+              <span className="fs-2">
                 <b>{minutes < 10 ? "0" + minutes : minutes}</b>
               </span>
               <span className="margin_left">Min</span>
             </div>
             <div>
-              <span className="count_numbers">
+              <span className="fs-2">
                 <b>{seconds < 10 ? "0" + seconds : seconds}</b>
               </span>
               <span className="margin_left">Sec</span>
