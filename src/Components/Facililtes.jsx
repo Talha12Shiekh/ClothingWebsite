@@ -3,13 +3,12 @@ import "bootstrap";
 import { FACILITES } from '../data/Data';
 
 const Facililtes = () => {
-    // row row-cols-lg-4
   return (
-    <section className='container' style={{marginTop:"8rem"}}>
+    <section className='container my-5'>
         <div className="row row-cols-1 row-cols-lg-4 row-cols-md-2">
             {
                 FACILITES.map(({key,Image,heading,description}) => {
-                    return <div key={key} className='d-flex' style={{gap:"2rem"}}>
+                    return <div key={key} className='d-flex my-3 my-md-0' style={{gap:"2rem"}}>
                         <div>
                             <Image/>
                         </div>

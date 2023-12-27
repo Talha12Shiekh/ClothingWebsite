@@ -5,17 +5,17 @@ import {LIST_ITEMS} from "../data/Data";
 import "../App.css";
 
 
-const ListItem = ({list}) => {
-    const [active,setactive] = useState(false);
-    return <li className={`nav-item mx-2 text-center ${list == "Home" ? "active" : ""} navbar_item ${active ? "active" : ""}`} 
-    onMouseOver={() => setactive(true)}
-    onMouseLeave={() => setactive(false)}
+const ListItem = ({list,index,active,setactive}) => {
+    return <li className={`nav-item mx-2 text-center navbar_item ${active == index ? "active" : ""}`} 
+    onMouseOver={() => setactive(index)}
+    // onMouseLeave={() => setactive(false)}
     >
     <a className="nav-link active" aria-current="page" href="#">{list}</a>
   </li>
 }
 
 const BootNavbar = () => {
+  const [active,setactive] = useState(0);
 
     
    return  <nav className="navbar navbar-expand-lg bg-light-subtle p-4">
@@ -29,8 +29,8 @@ const BootNavbar = () => {
        </ul>
        <form className="d-flex" role="search">
        <ul className="navbar-nav d-flex justify-content-center mx-auto me-auto mb-2 mb-lg-0">
-        {LIST_ITEMS.map(list => {
-            return  <ListItem key={list} list={list}/>
+        {LIST_ITEMS.map((list,index) => {
+            return  <ListItem active={active} setactive={setactive} index={index} key={list} list={list}/>
         })}
          </ul>
        </form>

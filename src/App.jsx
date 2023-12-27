@@ -7,6 +7,7 @@ import MainSlider from './Components/MainSlider';
 import Trends from './Components/Trends';
 import Discount from './Components/Discount';
 import Facililtes from './Components/Facililtes';
+import Portfolio from './Components/PortFolio';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <MainSlider/>
       {/* <Discount/> */}
       <Facililtes/>
+      <Portfolio/>
     </>
   )
 }

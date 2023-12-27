@@ -126,6 +126,15 @@ export const FACILITES = [
     description:"100% secure payment",
     key:4
   },
+];
+
+export const PORTFOLIO_IMAGES = [
+  trend1,
+  product1,
+  trend2,
+  product2,
+  trend3,
+  product3
 ]
 
 export const BALLS_DATA = [
