@@ -39,7 +39,7 @@ const SingleImage = ({ image }) => {
           height: 300,
           backgroundImage: `url(${image})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
+          backgroundSize: "contain",
           backgroundPosition: "center",
           position: "relative",
         }}
@@ -54,14 +54,10 @@ const SingleImage = ({ image }) => {
 
 const Portfolio = () => {
   return (
-    <div className="row row-cols-1 row-cols-lg-6 row-cols-md-3">
-      {PORTFOLIO_IMAGES.map((image) => {
-        return (
-          <>
-            <SingleImage key={image} image={image} />
-          </>
-        );
-      })}
+    <div className="row row-cols-1 row-cols-lg-6 row-cols-md-3 mx-auto" style={{width:"98%"}}>
+      {
+        PORTFOLIO_IMAGES.map(image => <SingleImage key={image} image={image} />)
+      }
     </div>
   );
 };

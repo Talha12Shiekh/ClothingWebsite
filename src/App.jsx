@@ -8,6 +8,7 @@ import Trends from './Components/Trends';
 import Discount from './Components/Discount';
 import Facililtes from './Components/Facililtes';
 import Portfolio from './Components/PortFolio';
+import Footer from './Components/Footer';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       {/* <Discount/> */}
       <Facililtes/>
       <Portfolio/>
+      <Footer/>
     </>
   )
 }
