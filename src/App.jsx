@@ -5,7 +5,7 @@ import Products from "./Components/Products";
 import Courasel from "./Components/Courasel";
 import MainSlider from './Components/MainSlider';
 import Trends from './Components/Trends';
-import Discount from './Components/Discount';
+import Discount from './Components/Discount2';
 import Facililtes from './Components/Facililtes';
 import Portfolio from './Components/PortFolio';
 import Footer from './Components/Footer';
@@ -21,7 +21,7 @@ function App() {
       <Courasel/>
       <Trends/>
       <MainSlider/>
-      {/* <Discount/> */}
+      <Discount/>
       <Facililtes/>
       <Portfolio/>
       <Footer/>
