@@ -4,6 +4,7 @@ import "bootstrap";
 import SingleProduct from "./SingleProduct";
 import {PRODUCTS} from "../data/Data";
 import {motion} from "framer-motion"
+import NavigationShowing from "./NavigationShowing";
 
 const Products = () => {
 

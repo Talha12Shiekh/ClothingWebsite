@@ -2,6 +2,7 @@ import React from 'react';
 import "bootstrap";
 import { FACILITES } from '../data/Data';
 
+
 const Facililtes = () => {
   return (
     <section className='container my-5'>

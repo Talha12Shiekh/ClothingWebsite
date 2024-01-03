@@ -16,19 +16,19 @@ const MainSlider = () => {
     >
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src={Slider1} className="d-block w-100 slider_image" alt="Loading..." />
+          <img loading="lazy"  src={Slider1} className="d-block w-100 slider_image" alt="Loading..." />
         </div>
         <div className="carousel-item">
-          <img src={Slider2} className="d-block w-100 slider_image" alt="Loading..." />
+          <img loading="lazy"  src={Slider2} className="d-block w-100 slider_image" alt="Loading..." />
         </div>
         <div className="carousel-item">
-          <img src={Slider3} className="d-block w-100 slider_image" alt="Loading..." />
+          <img loading="lazy"  src={Slider3} className="d-block w-100 slider_image" alt="Loading..." />
         </div>
         <div className="carousel-item">
-          <img src={Slider4} className="d-block w-100 slider_image" alt="Loading..." />
+          <img loading="lazy"  src={Slider4} className="d-block w-100 slider_image" alt="Loading..." />
         </div>
         <div className="carousel-item">
-          <img src={Slider5} className="d-block w-100 slider_image" alt="Loading..." />
+          <img loading="lazy"  src={Slider5} className="d-block w-100 slider_image" alt="Loading..." />
         </div>
       </div>
       <button

@@ -67,7 +67,7 @@ const Discount2 = () => {
       <div class="row">
         <div class="col-lg-6 p-0 bg-primary">
           <div style={{ height: 400 }}>
-            <img
+            <img loading="lazy" 
               src={discountImage}
               className="w-100 h-100"
               alt="Loading..."

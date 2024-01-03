@@ -25,7 +25,7 @@ const SingleProduct = ({ name, price, image }) => {
           })}
         </div>
 
-        <img
+        <img loading="lazy" 
           src={image}
           style={{
             backgroundColor: PRODUCT_BACKGROUND_COLOR,

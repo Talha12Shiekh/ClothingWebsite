@@ -13,7 +13,7 @@ const SingleTrendCard = ({image,item,price}) => {
     return <div className="card border-0 my-5" style={{maxWidth: "540px"}}>
     <div className="row g-0">
       <div className="col-md-4 col-sm-2 col-2">
-        <img src={image} style={{backgroundColor:PRODUCT_BACKGROUND_COLOR}} className="img-fluid h-100 trend_image rounded-start" alt="Loading ..." />
+        <img loading="lazy"  src={image} style={{backgroundColor:PRODUCT_BACKGROUND_COLOR}} className="img-fluid h-100 trend_image rounded-start" alt="Loading ..." />
       </div>
       <div className="col-md-8 col-sm-10 col-10">
         <div className="card-body">
