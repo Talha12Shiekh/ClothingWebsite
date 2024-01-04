@@ -335,6 +335,37 @@ const THIRD_IMAGE_BACKGROUND = "#d6d4f0";
 const FOURTH_IMAGE_BACKGROUND = "#fedbe5";
 const FIFTH_IMAGE_BACKGROUND = "#cee2f5";
 
+export const CONTACT_INFO_DATA = [
+  {
+    heading:"Address",
+    description:"222 G3, Johar Town, Lahore",
+    icon:<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    viewBox="0 0 24 24"
+  >
+    <path
+      fill="brown"
+      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7m0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5"
+    ></path>
+  </svg>,
+    key:1
+  },
+  {
+    heading:"Phone",
+    description:"03218877661 || 03214946471",
+    icon:<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="brown" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02z"></path></svg>,
+    key:2
+  },
+  {
+    heading:"Support",
+    description:"khurram_shafique@gmail.com",
+    icon:<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="brown" d="M12 3a9 9 0 0 0-9 9v7c0 1.1.9 2 2 2h4v-8H5v-1c0-3.87 3.13-7 7-7s7 3.13 7 7v1h-4v8h4c1.1 0 2-.9 2-2v-7a9 9 0 0 0-9-9"></path></svg>,
+    key:3
+  }
+]
+
 export const LIST_ITEMS = [
   { item: "Home", key: 1,path:"/" },
   { item: "Products",key:2,path:"/Products" },

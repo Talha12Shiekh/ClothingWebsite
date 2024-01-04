@@ -3,7 +3,7 @@ import { FidgetSpinner } from "react-loader-spinner";
 
 const FallBack = () => {
   return (
-    <div style={{height:"100vh",display:"flex",justifyContent:"center",alignItems:"center"}}>
+    <div style={{height:"100vh"}} className="d-flex justify-content-center align-items-center">
     <FidgetSpinner
       visible={true}
       height="150"

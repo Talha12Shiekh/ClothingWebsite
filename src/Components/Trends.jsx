@@ -4,12 +4,12 @@ import "bootstrap";
 import { TRENDS,SELLERS,FEATURES } from '../data/Data';
 import { PRODUCT_BACKGROUND_COLOR } from './SingleProduct';
 
-const Heading = ({heading}) => {
+export const Heading = ({heading}) => {
     return <h3 className='my-3 position-relative trends_heading monteserrat text-uppercase fs-4'>{heading}</h3>
 }
 
 
-const SingleTrendCard = ({image,item,price}) => {
+export const SingleTrendCard = ({image,item,price}) => {
     return <div className="card border-0 my-5" style={{maxWidth: "540px"}}>
     <div className="row g-0">
       <div className="col-md-4 col-sm-2 col-2">

@@ -42,6 +42,7 @@ const SingleImage = ({ image }) => {
           backgroundSize: "contain",
           backgroundPosition: "center",
           position: "relative",
+          marginInline:"auto",
         }}
         onMouseOver={() => setisHovered(true)}
         onMouseLeave={() => setisHovered(false)}
@@ -54,7 +55,7 @@ const SingleImage = ({ image }) => {
 
 const Portfolio = () => {
   return (
-    <div className="row row-cols-1 row-cols-lg-6 row-cols-md-3 mx-auto" style={{width:"98%"}}>
+    <div className="row row-cols-1 row-cols-lg-6 row-cols-md-3 mx-auto my-5" >
       {
         PORTFOLIO_IMAGES.map(image => <SingleImage key={image} image={image} />)
       }

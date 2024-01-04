@@ -15,7 +15,7 @@ const SingleProduct = ({ name, price, image }) => {
         initial={{opacity:0}}
         animate={{opacity:1}}
         exit={{opacity:0}}
-        className="card col-12 col-md-5 col-lg-3 my-3 border-0 position-relative  overflow-hidden"
+        className="card col-11 col-md-5 col-lg-3 my-3 border-0 position-relative  overflow-hidden"
       >
         <div className="appearing_balls d-flex position-absolute ">
           {BALLS_DATA.map(({key,icon}, index) => {

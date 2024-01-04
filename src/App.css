@@ -91,6 +91,10 @@ font-family: 'Poppins', sans-serif; */
     top:1.5rem;
 }
 
+.app_clothes::after{
+    width: 8% !important;
+}
+
 .item_button::after{
     width:100%;
     left: 0;

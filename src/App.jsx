@@ -1,5 +1,4 @@
 import { Suspense, lazy } from "react";
-
 import "./App.css";
 
 const Navbar = lazy(() => import("./Components/BootNavbar"));
@@ -16,12 +15,47 @@ const Footer = lazy(() => import("./Components/Footer"));
 import { Routes, Route } from "react-router-dom";
 import FallBack from "./Components/FallBack";
 import NavigationShowing from "./Components/NavigationShowing";
+import { PRODUCTS, TRENDS } from "./data/Data";
+import { Heading, SingleTrendCard } from "./Components/Trends";
+import Contacts from "./Components/Contacts";
+const SingleProduct = lazy(() => import("./Components/SingleProduct"));
+
+const HomeScreenProducts = () => {
+  return (
+    <>
+      <h3 className="mx-5 monteserrat products_heading position-relative app_clothes mb-5 ">
+        PRODUCTS
+      </h3>
+      <div className="d-flex justify-content-around flex-wrap">
+        {PRODUCTS.slice(0, 3).map((product) => {
+          return <SingleProduct {...product} key={product.key} />;
+        })}
+      </div>
+    </>
+  );
+};
+
+const HomeScreenTrends = () => {
+  return (
+    <div className="container my-5">
+      <h3 className="monteserrat products_heading position-relative app_clothes mb-5">
+        TRENDS
+      </h3>
+      <div className="row row-cols-md-2 row-cols-lg-3 row-cols-1">
+        {TRENDS.slice(0, 4).map((trend) => {
+          return <SingleTrendCard key={trend.key} {...trend} />;
+        })}
+      </div>
+    </div>
+  );
+};
 
 const HeaderAndFooter = ({ children }) => {
   return (
     <>
       <Navbar />
       {children}
+      <Portfolio />
       <Footer />
     </>
   );
@@ -32,10 +66,11 @@ const Home = () => {
     <HeaderAndFooter>
       <MainContent />
       <Courasel />
+      <HomeScreenProducts />
       <MainSlider />
+      <HomeScreenTrends />
       <Discount />
       <Facililtes />
-      <Portfolio />
     </HeaderAndFooter>
   );
 };
@@ -60,7 +95,7 @@ const ContactsScreen = () => {
   return (
     <HeaderAndFooter>
       <NavigationShowing />
-      <h1>Contacts</h1>
+      <Contacts/>
     </HeaderAndFooter>
   );
 };
@@ -104,12 +139,6 @@ function App() {
       </Routes>
     </Suspense>
   );
-}
-
-function delayForDemo(promise) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, 2000);
-  }).then(() => promise);
 }
 
 export default App;
