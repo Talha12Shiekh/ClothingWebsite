@@ -37,24 +37,24 @@ const Contacts = () => {
             <h5 className="monteserrat fw-bold">SEND MESSAGE</h5>
             <input
               type="text"
-              class="form-control mt-4 p-3 monteserrat"
+              className="form-control mt-4 p-3 monteserrat"
               placeholder="Name"
               aria-label="Username"
             />
             <input
               type="text"
-              class="form-control mt-4 p-3 monteserrat"
+              className="form-control mt-4 p-3 monteserrat"
               placeholder="Email"
               aria-label="Email"
             />
             <input
               type="text"
-              class="form-control mt-4 p-3 monteserrat"
+              className="form-control mt-4 p-3 monteserrat"
               placeholder="Website"
               aria-label="Website"
             />
             <textarea
-              class="form-control mt-4 monteserrat p-3"
+              className="form-control mt-4 monteserrat p-3"
               aria-label="With textarea"
               placeholder="Message"
               style={{ height: 140, resize: "none" }}

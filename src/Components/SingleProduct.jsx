@@ -4,10 +4,12 @@ import "../App.css";
 import AppearingBalls from "./AppearingBalls";
 import { BALLS_DATA } from "../data/Data";
 import {motion} from "framer-motion"
+import Modal from "./Modal";
+
 
 export const PRODUCT_BACKGROUND_COLOR = "#eaece9";
 
-const SingleProduct = ({ name, price, image }) => {
+const SingleProduct = ({ name, price, image,setshowDialog,setDialogImage }) => {
   return (
     <>
       <motion.div
@@ -19,8 +21,7 @@ const SingleProduct = ({ name, price, image }) => {
       >
         <div className="appearing_balls d-flex position-absolute ">
           {BALLS_DATA.map(({key,icon}, index) => {
-            return (
-            <AppearingBalls key={key} index={index}  icon={icon} />
+            return ( <AppearingBalls setDialogImage={setDialogImage} setshowDialog={setshowDialog} key={key} image={image} index={index}  icon={icon} />
             )
           })}
         </div>

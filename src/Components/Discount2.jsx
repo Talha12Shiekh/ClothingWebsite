@@ -63,9 +63,9 @@ const CountDownRender = ({ hours, minutes, seconds, completed, days }) => {
 
 const Discount2 = () => {
   return (
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 p-0 bg-primary">
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-6 p-0 bg-primary">
           <div style={{ height: 400 }}>
             <img loading="lazy" 
               src={discountImage}
@@ -76,7 +76,7 @@ const Discount2 = () => {
           </div>
         </div>
         <div
-          class="col-lg-6 p-0 d-flex justify-content-center align-items-center flex-column"
+          className="col-lg-6 p-0 d-flex justify-content-center align-items-center flex-column"
           style={{
             backgroundColor: PRODUCT_BACKGROUND_COLOR,
             backgroundImage: `url(${canvas.toDataURL()})`,

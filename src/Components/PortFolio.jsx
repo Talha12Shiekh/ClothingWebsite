@@ -3,7 +3,7 @@ import "bootstrap";
 import { PORTFOLIO_IMAGES } from "../data/Data";
 import "../App.css";
 
-const HoverCard = ({ isHovered }) => {
+const HoverCard = ({ isHovered,showDialog }) => {
   return (
     <div
       className="position-absolute w-100 h-100 d-flex justify-content-center align-items-center flex-column"
@@ -55,7 +55,7 @@ const SingleImage = ({ image }) => {
 
 const Portfolio = () => {
   return (
-    <div className="row row-cols-1 row-cols-lg-6 row-cols-md-3 mx-auto my-5" >
+    <div style={{overflowX:"hidden"}} className="row row-cols-1 row-cols-lg-6 row-cols-md-3 mx-auto my-5" >
       {
         PORTFOLIO_IMAGES.map(image => <SingleImage key={image} image={image} />)
       }
