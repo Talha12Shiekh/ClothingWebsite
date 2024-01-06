@@ -6,13 +6,15 @@ import { PRODUCT_BACKGROUND_COLOR } from "./SingleProduct";
 
 const SingleIcon = ({ icon }) => {
   return (
-    <div
+    <a
+      target="_blank"
+      href={icon.href}
       className="single_icon rounded-pill mx-2 d-flex justify-content-center align-items-center"
       type="button"
       style={{ backgroundColor: PRODUCT_BACKGROUND_COLOR }}
     >
-      {icon}
-    </div>
+      {icon.icon}
+    </a>
   );
 };
 
@@ -133,7 +135,7 @@ const Footer = () => {
               </div>
               <div className="d-flex mt-4">
                 {SOCIAL_ICONS.map((icon, index) => {
-                  return <SingleIcon key={icon} icon={icon} />;
+                  return <SingleIcon key={icon.key} icon={icon} />
                 })}
               </div>
             </form>

@@ -229,7 +229,7 @@ export const PORTFOLIO_IMAGES = [
 ];
 
 export const SOCIAL_ICONS = [
-  <svg
+  {icon:<svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"
@@ -237,46 +237,46 @@ export const SOCIAL_ICONS = [
   >
     <path
       d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64h-64z"
-      fill="currentColor"
+      fill="black"
     ></path>
-  </svg>,
-  <svg
+  </svg>,key:1,href:"https://www.facebook.com/profile.php?id=100009946936826&mibextid=ZbWkwL"},
+ { icon:<svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"
     viewBox="0 0 512 512"
   >
     <path
-      fill="currentColor"
+      fill="black"
       d="M496 109.5a201.8 201.8 0 0 1-56.55 15.3a97.51 97.51 0 0 0 43.33-53.6a197.74 197.74 0 0 1-62.56 23.5A99.14 99.14 0 0 0 348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 0 0 2.54 22.1a280.7 280.7 0 0 1-203-101.3A95.69 95.69 0 0 0 36 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0 1 35.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 0 1-25.94 3.4a94.38 94.38 0 0 1-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0 1 39.5 405.6a203 203 0 0 1-23.5-1.4A278.68 278.68 0 0 0 166.74 448c181.36 0 280.44-147.7 280.44-275.8c0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 0 0 496 109.5"
     ></path>
-  </svg>,
-  <svg
+  </svg>,key:2,href:""},
+  {icon:<svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"
     viewBox="0 0 512 512"
   >
     <path
-      fill="currentColor"
+      fill="black"
       d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149C1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5c58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5c2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9M207 353.89v-196.5l145 98.2Z"
     ></path>
-  </svg>,
-  <svg
+  </svg>,key:3,href:"https://www.youtube.com/@codepalace-or3vq"},
+  {icon:<svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"
     viewBox="0 0 512 512"
   >
     <path
-      fill="currentColor"
+      fill="black"
       d="M349.33 69.33a93.62 93.62 0 0 1 93.34 93.34v186.66a93.62 93.62 0 0 1-93.34 93.34H162.67a93.62 93.62 0 0 1-93.34-93.34V162.67a93.62 93.62 0 0 1 93.34-93.34zm0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32"
     ></path>
     <path
-      fill="currentColor"
+      fill="black"
       d="M377.33 162.67a28 28 0 1 1 28-28a27.94 27.94 0 0 1-28 28M256 181.33A74.67 74.67 0 1 1 181.33 256A74.75 74.75 0 0 1 256 181.33m0-37.33a112 112 0 1 0 112 112a112 112 0 0 0-112-112"
     ></path>
-  </svg>,
+  </svg>,key:4,href:"https://www.instagram.com/tlha_shkh/"},
 ];
 
 export const BALLS_DATA = [

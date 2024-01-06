@@ -1,4 +1,4 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy,useState } from "react";
 import "./App.css";
 
 const Navbar = lazy(() => import("./Components/BootNavbar"));
@@ -20,35 +20,6 @@ import { Heading, SingleTrendCard } from "./Components/Trends";
 import Contacts from "./Components/Contacts";
 const SingleProduct = lazy(() => import("./Components/SingleProduct"));
 
-// const HomeScreenProducts = () => {
-//   return (
-//     <>
-//       <h3 className="mx-5 monteserrat products_heading position-relative app_clothes mb-5 ">
-//         PRODUCTS
-//       </h3>
-//       <div className="d-flex justify-content-around flex-wrap">
-//         {PRODUCTS.slice(0, 3).map((product) => {
-//           return <SingleProduct {...product} key={product.key} />;
-//         })}
-//       </div>
-//     </>
-//   );
-// };
-
-// const HomeScreenTrends = () => {
-//   return (
-//     <div className="container my-5">
-//       <h3 className="monteserrat products_heading position-relative app_clothes mb-5">
-//         TRENDS
-//       </h3>
-//       <div className="row row-cols-md-2 row-cols-lg-3 row-cols-1">
-//         {TRENDS.slice(0, 4).map((trend) => {
-//           return <SingleTrendCard key={trend.key} {...trend} />;
-//         })}
-//       </div>
-//     </div>
-//   );
-// };
 
 const HeaderAndFooter = ({ children }) => {
   return (
@@ -62,14 +33,14 @@ const HeaderAndFooter = ({ children }) => {
 };
 
 const Home = () => {
+  const [showThankModal,setshowThankModal] = useState(false)
+
   return (
     <HeaderAndFooter>
-      <MainContent />
+      <MainContent  showThankModal={showThankModal}setshowThankModal={setshowThankModal}/>
       <MainSlider />
-      {/* <HomeScreenProducts /> */}
-      <Discount />
-      {/* <HomeScreenTrends /> */}
-      <Courasel />
+      <Discount setshowThankModal={setshowThankModal}/>
+      <Courasel setshowThankModal={setshowThankModal}/>
       <Facililtes />
     </HeaderAndFooter>
   );

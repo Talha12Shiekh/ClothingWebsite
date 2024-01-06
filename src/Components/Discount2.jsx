@@ -13,7 +13,7 @@ c.arc(canvas.width / 2, canvas.height / 2, 80, 0, Math.PI * 2, false);
 c.fillStyle = "white";
 c.fill();
 
-const TARGET_DISCOUNT_DATE = new Date("January 5, 2024 12:0:00").getTime();
+const TARGET_DISCOUNT_DATE = new Date("January 10, 2024 12:0:00").getTime();
 
 const CountDownTimer = ({ hours, minutes, seconds, days }) => {
   return (
@@ -61,7 +61,7 @@ const CountDownRender = ({ hours, minutes, seconds, completed, days }) => {
   }
 };
 
-const Discount2 = () => {
+const Discount2 = ({setshowThankModal}) => {
   return (
     <div className="container">
       <div className="row">
@@ -108,6 +108,7 @@ const Discount2 = () => {
               fontWeight: "bolder",
               marginTop: 30,
             }}
+            onClick={() => setshowThankModal(p => !p)}
             className="h5 underline item_button text-bold font-weight-bold position-relative"
           >
             SHOP NOW

@@ -1,13 +1,16 @@
-import React from "react";
+import React,{useState} from "react";
 import "bootstrap";
 import lady from "../assets/cloth.png";
 import {CARD_ITEMS_ARRAY} from "../data/Data";
 import "../App.css";
 import SIngleCardItem from "./SIngleCardItem";
 const FIRST_IMAGE_BACKGROUND= "#fae3d9";
+import ThanksModal from "./ThanksModal"
 
-const MainContent = () => {
+const MainContent = ({showThankModal,setshowThankModal}) => {
   return (
+    <>
+      <ThanksModal active={showThankModal} setactive={setshowThankModal}/>
     <div className="container-fluid">
       <div className="row">
         <div
@@ -27,7 +30,7 @@ const MainContent = () => {
           <p className="mx-4 my-4 fashion_description">
             Here you will get all type of clothes of women including clothes of different brands in minimum prices
           </p>
-        <a style={{textDecoration:"none",cursor:"pointer",fontWeight:"bolder",width:100}} className="mx-4 h6 underline text-bold font-weight-bold position-relative">SHOP NOW</a>
+        <a onClick={() => setshowThankModal(p => !p)} style={{textDecoration:"none",cursor:"pointer",fontWeight:"bolder",width:100}} className="mx-4 h6 underline text-bold font-weight-bold position-relative">SHOP NOW</a>
         </div>
         <div className="col-12 col-lg-6 mx-auto my-3">
           <div className="row row-cols-sm-2 d-flex row-cols-1 justify-content-center align-items-center">
@@ -37,6 +40,7 @@ const MainContent = () => {
                   key={item.heading}
                   item={item}
                   index={index}
+                  setshowThankModal={setshowThankModal}
                   />
                 })
               }
@@ -44,6 +48,7 @@ const MainContent = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

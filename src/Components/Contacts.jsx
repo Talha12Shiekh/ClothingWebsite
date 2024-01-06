@@ -2,6 +2,9 @@ import React from "react";
 import "bootstrap";
 import "../App.css";
 import { CONTACT_INFO_DATA } from "../data/Data";
+import { useForm,ValidationError } from '@formspree/react';
+
+const FORM_ID = "xwkjbann"
 
 const SingleContactInfo = ({ heading, description, icon }) => {
   return (
@@ -16,6 +19,11 @@ const SingleContactInfo = ({ heading, description, icon }) => {
 };
 
 const Contacts = () => {
+  const [state, handleSubmit, reset] = useForm(FORM_ID);
+
+  if (state.succeeded) {
+    return <div>Thank you for signing up!</div>;
+  }
   return (
     <div className="container">
       <div className="row justify-content-center">
@@ -33,20 +41,23 @@ const Contacts = () => {
               );
             })}
           </div>
-          <div className="my-5">
+          <form onSubmit={handleSubmit} className="my-5">
             <h5 className="monteserrat fw-bold">SEND MESSAGE</h5>
             <input
+            required
               type="text"
               className="form-control mt-4 p-3 monteserrat"
               placeholder="Name"
               aria-label="Username"
             />
             <input
-              type="text"
+            required
+              type="email"
               className="form-control mt-4 p-3 monteserrat"
               placeholder="Email"
               aria-label="Email"
             />
+            <ValidationError field="email" prefix="Email" errors={state.errors} />
             <input
               type="text"
               className="form-control mt-4 p-3 monteserrat"
@@ -61,12 +72,13 @@ const Contacts = () => {
             ></textarea>
             <button
               className="btn btn-danger fw-bold rounded-pill footer_button monteserrat text-uppercase mt-4 px-4 py-2"
-              type="button"
+              type="submit"
               style={{ backgroundColor: "#ca1515", fontSize: 14 }}
+              disabled={state.submitting}
             >
               SEND MESSAGE
             </button>
-          </div>
+          </form>
         </div>
         <div className="col-md-6 col-12">
           <iframe

@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap";
 import "../App.css"
 
-const SIngleCardItem = ({item,index}) => {
+const SIngleCardItem = ({item,index,setshowThankModal}) => {
   return (
     <>
     <div
@@ -21,7 +21,7 @@ const SIngleCardItem = ({item,index}) => {
      <p >
         {item.text}
      </p>
-    <a style={{textDecoration:"none",cursor:"pointer",fontSize:14,fontWeight:"bolder"}} className="h5 underline item_button text-bold font-weight-bold position-relative my-2">SHOP NOW</a>
+    <a onClick={() => setshowThankModal(p => !p)} style={{textDecoration:"none",cursor:"pointer",fontSize:14,fontWeight:"bolder"}} className="h5 underline item_button text-bold font-weight-bold position-relative my-2">SHOP NOW</a>
     </div>
     {index == 1 && <div className="w-100"></div>}
     </>

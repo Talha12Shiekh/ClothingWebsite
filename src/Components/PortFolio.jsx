@@ -46,6 +46,7 @@ const SingleImage = ({ image }) => {
         }}
         onMouseOver={() => setisHovered(true)}
         onMouseLeave={() => setisHovered(false)}
+        onClick={() => location.href = "https://www.instagram.com/tlha_shkh/"}
       >
         <HoverCard isHovered={isHovered} />
       </div>

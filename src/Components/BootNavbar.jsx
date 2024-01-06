@@ -9,7 +9,6 @@ const ListItem = ({ list }) => {
   const location = useLocation();
   return (
     <li
-      key={list.key}
       className={`nav-item mx-2 text-center navbar_item ${
         location.pathname == list.path ? "active" : ""
       }`}
@@ -22,7 +21,6 @@ const ListItem = ({ list }) => {
 };
 
 const BootNavbar = () => {
-
   return (
     <nav className="navbar navbar-expand-lg bg-light-subtle p-4">
       <div className="container-fluid d-flex align-items-center">
@@ -38,14 +36,14 @@ const BootNavbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className={`collapse navbar-collapse`} id="navbarSupportedContent" >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0"></ul>
           <form className="d-flex" role="search">
             <ul className="navbar-nav d-flex justify-content-center mx-auto me-auto mb-2 mb-lg-0">
               {LIST_ITEMS.map((list) => {
                 return (
                   <ListItem
-                    key={list}
+                    key={list.key}
                     list={list}
                   />
                 )
