@@ -4,7 +4,6 @@ import "bootstrap";
 import SingleProduct from "./SingleProduct";
 import {PRODUCTS} from "../data/Data";
 import {motion} from "framer-motion"
-import NavigationShowing from "./NavigationShowing";
 import Modal from "./Modal";
 
 const Products = () => {
@@ -15,11 +14,9 @@ const Products = () => {
 
     const [dialogImage,setDialogImage] = useState("");
 
-    const ModalRef = useRef(null);
-
     return (
         <>
-        <Modal ref={ModalRef} dialogImage={dialogImage} active={showDialog} setactive={setshowDialog}/>
+        <Modal dialogImage={dialogImage} active={showDialog} setactive={setshowDialog}/>
 
         <div className="px-5 my-5">
             <ProductsFilter products={products} setproducts={setproducts}/>

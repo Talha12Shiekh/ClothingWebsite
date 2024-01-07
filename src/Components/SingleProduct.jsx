@@ -41,9 +41,11 @@ const SingleProduct = ({ name, price, image,setshowDialog,setDialogImage }) => {
           <div className="text-center mb-2">
             {Array(5)
               .fill("")
-              .map((s) => {
+              .map((s,index) => {
+                const key = `${Math.floor(Math.random())}${index}` 
                 return (
                   <svg
+                    key={key}
                     xmlns="http://www.w3.org/2000/svg"
                     width="1em"
                     height="1em"

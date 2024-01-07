@@ -1,8 +1,9 @@
-import React from "react";
+import React,{ useState,useEffect } from "react";
 import "bootstrap";
 import "../App.css";
 import { SOCIAL_ICONS } from "../data/Data";
 import { PRODUCT_BACKGROUND_COLOR } from "./SingleProduct";
+import { useForm } from "@formspree/react";
 
 const SingleIcon = ({ icon }) => {
   return (
@@ -19,6 +20,17 @@ const SingleIcon = ({ icon }) => {
 };
 
 const Footer = () => {
+  const [state, handleSubmit] = useForm("xvoeoyee");
+
+  const [active,setactive] = useState(false)
+
+  useEffect(() => {
+    if (state.succeeded) {
+      setactive(true) 
+    }else {
+      setactive(false) 
+    }
+  },[state.succeeded])
   return (
     <div className="container my-5">
       <footer className="py-5">
@@ -108,22 +120,24 @@ const Footer = () => {
           </div>
 
           <div className="col-lg-4 col-sm-8 col-md-8 mb-3">
-            <form>
+            <form onSubmit={handleSubmit}>
               <h5 className="monteserrat fw-bold fs-6 mb-4">NEWSLETTER</h5>
               <div className="d-flex flex-column flex-sm-row w-100 gap-2 position-relative">
                 <label htmlFor="newsletter1" className="visually-hidden">
                   Email address
                 </label>
                 <input
-                  id="newsletter1"
+                  id="name"
+                  name="name"
                   type="text"
                   className="form-control footer_input px-4 monteserrat fw-light rounded-pill"
                   placeholder="Email"
-                  style={{ padding: ".7em" }}
+                  style={{ padding: ".7em",paddingRight:"14rem !important" }}
                 />
                 <button
                   className="btn btn-danger fw-bold rounded-pill footer_button position-absolute end-0 h-100 monteserrat text-uppercase"
-                  type="button"
+                  type="submit"
+                  disabled={state.submitting}
                   style={{
                     width: "40%",
                     backgroundColor: "#ca1515",
@@ -133,6 +147,8 @@ const Footer = () => {
                   Subscribe
                 </button>
               </div>
+                
+                {active && <p>Your response has been submitted</p>}
               <div className="d-flex mt-4">
                 {SOCIAL_ICONS.map((icon, index) => {
                   return <SingleIcon key={icon.key} icon={icon} />

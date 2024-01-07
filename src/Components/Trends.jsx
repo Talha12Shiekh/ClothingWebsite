@@ -21,9 +21,11 @@ export const SingleTrendCard = ({image,item,price}) => {
           <div className='mb-3'>
             {Array(5)
               .fill("")
-              .map((s) => {
+              .map((s,index) => {
+                const key = `${Math.floor(Math.random() * 3)}${index}`
                 return (
                   <svg
+                    key={key}
                     xmlns="http://www.w3.org/2000/svg"
                     width=".8em"
                     height=".8em"
@@ -60,6 +62,7 @@ const Trends = () => {
             <div>
                 <Heading heading={"best seller"}/>
                 {SELLERS.map(trend => {
+
                     return <SingleTrendCard key={trend.key}
                     {...trend}
                     />
@@ -68,6 +71,7 @@ const Trends = () => {
             <div>
                 <Heading heading={"feature"}/>
                 {FEATURES.map(trend => {
+
                     return <SingleTrendCard key={trend.key}
                     {...trend}
                     />

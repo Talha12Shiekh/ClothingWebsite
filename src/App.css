@@ -4,6 +4,10 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+.footer_input{
+    padding-right:14rem !important;
+}
+
 /* font-family: 'Cookie', cursive;
 font-family: 'Montserrat', sans-serif;
 font-family: 'Poppins', sans-serif; */

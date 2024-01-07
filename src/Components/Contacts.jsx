@@ -20,7 +20,7 @@ const SingleContactInfo = ({ heading, description, icon }) => {
 const Contacts = () => {
   const [state, handleSubmit] = useForm("xvoeoyee");
 
-  const message = <p>Thank you for signing in ! Your response has been submitted</p>
+  const message = <>Thank you for signing in ! Your response has been submitted</>
 
   const [active,setactive] = useState(false)
 
@@ -112,9 +112,9 @@ const Contacts = () => {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27225.328237875936!2d74.25636258697475!3d31.46461865700412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919015f82b0b86f%3A0x2fcaf9fdeb3d02e6!2sJohar%20Town%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1704368754953!5m2!1sen!2s"
             height="800"
             style={{ border: 0, width: "100%" }}
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>

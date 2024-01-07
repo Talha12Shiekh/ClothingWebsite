@@ -8,7 +8,7 @@ const Modal = ({ active, dialogImage,setactive }) => {
       <div
         role="dialog"
         className={`modal  ${active ? "modal-dialog-centered" : ""}`}
-        tabindex="-1"
+        tabIndex="-1"
         style={{backgroundColor: 'rgba(0,0,0,.5)'}}
         onClick={() => setactive(p => !p)}
       >
