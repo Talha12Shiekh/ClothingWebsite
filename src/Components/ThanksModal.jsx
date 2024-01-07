@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom';
 import ThankYouImage from "../assets/thankYou.png";
 import "../App.css"
 
-const ThanksModal = ({ active,setactive }) => {
+const ThanksModal = ({ active,setactive,message }) => {
   return (
     createPortal(<div id="myModal" role="dialog">
       <div
@@ -17,7 +17,7 @@ const ThanksModal = ({ active,setactive }) => {
         <div className="modal-dialog">
           <div className="modal-content p-3 d-flex justify-content-start align-items-center flex-column">
                 <img style={{width:200,height:180}} src={ThankYouImage} alt="Loading..." loading="lazy"/>
-                <p className="h1 text-center cookie">Thank you for coming to us for more information contact at <br/> <strong>+92 3218877661</strong></p>
+                <p className="h1 text-center cookie">{message}</p>
                 <button type="button" className="btn monteserrat fw-bold btn-info mt-2 text-uppercase" style={{fontSize:20,width:"80%"}}>Back to site</button>
           </div>
         </div>

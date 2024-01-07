@@ -8,9 +8,10 @@ const FIRST_IMAGE_BACKGROUND= "#fae3d9";
 import ThanksModal from "./ThanksModal"
 
 const MainContent = ({showThankModal,setshowThankModal}) => {
+  const message = <p>Thank you for coming to us for more information contact at <br/> <strong>+92 3218877661</strong></p>
   return (
     <>
-      <ThanksModal active={showThankModal} setactive={setshowThankModal}/>
+      <ThanksModal active={showThankModal} setactive={setshowThankModal} message={message}/>
     <div className="container-fluid">
       <div className="row">
         <div
